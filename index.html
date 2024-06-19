@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="music-player">
+        <h1>Music Player</h1>
+
+        <div class="song-details">
+            <img id="song-image" src="" alt="Song Image">
+            <div>
+                <h2 id="song-name">Song Name</h2>
+                <h3 id="artist-name">Artist Name</h3>
+                <h4 id="album-name">Album Name</h4>
+            </div>
+        </div>
+
+        <audio id="audio" preload="auto"></audio>
+
+        <div class="controls">
+            <button onclick="playMusic()">Play</button>
+            <button onclick="pauseMusic()">Pause</button>
+            <button onclick="stopMusic()">Stop</button>
+            <button onclick="prevSong()">Previous</button>
+            <button onclick="nextSong()">Next</button>
+            <button onclick="volumeUp()">Volume Up</button>
+            <button onclick="volumeDown()">Volume Down</button>
+            <button id="shuffle-button" onclick="toggleShuffle()">Shuffle Off</button>
+        </div>
+        
+        <div class="progress-container">
+            <div id="current-time">0:00</div>
+            <input type="range" id="progress-bar" value="0" min="0" max="100">
+            <div id="duration-time">0:00</div>
+        </div>
+
+        <div class="volume-display">
+            <span id="volume-percentage">100%</span>
+        </div>
+
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search songs...">
+            <button onclick="searchPlaylist()">Search</button>
+        </div>
+
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

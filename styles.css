@@ -1,0 +1,208 @@
+/* Reset CSS */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('H:/Abdullah Elsayed/Code Alpha/MUSIC PLAYER/images/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* تعديل لون النص */
+}
+
+/* Music Player Container */
+.music-player {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.7); /* تعديل خلفية المشغل */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #ffffff; /* تعديل لون النص */
+}
+
+/* Heading Style */
+.music-player h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Song Details Section */
+.song-details {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-details img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.song-details div {
+    text-align: left;
+}
+
+.song-details h2,
+.song-details h3,
+.song-details p {
+    margin: 5px 0;
+}
+
+/* Controls Section */
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* للسماح بالتفاف الأزرار في أكثر من سطر */
+}
+
+.controls button {
+    background-color: #1DB954; /* لون أخضر مشابه لـ Spotify */
+    color: white;
+    padding: 12px 24px; /* زيادة حجم الأزرار */
+    border: none;
+    cursor: pointer;
+    margin: 8px; /* زيادة المسافة بين الأزرار */
+    border-radius: 25px; /* تدوير الأزرار */
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل للأزرار */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* تأثيرات التحويل */
+}
+
+.controls button:hover {
+    background-color: #1AA34A; /* تغيير لون الخلفية عند التحوم */
+    transform: scale(1.05); /* تكبير الزر عند التحوم */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* تغيير ظل الزر عند التحوم */
+}
+
+/* تكبير الصورة العلوية */
+.song-details img {
+    width: 150px; /* زيادة حجم الصورة */
+    height: 150px; /* زيادة حجم الصورة */
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .song-details img {
+        width: 120px; /* تصغير الصورة عند حجم الشاشة الصغير */
+        height: 120px; /* تصغير الصورة عند حجم الشاشة الصغير */
+        margin-right: 10px;
+    }
+
+    .controls button {
+        padding: 10px 20px; /* تصغير الأزرار عند حجم الشاشة الصغير */
+        font-size: 14px; /* تصغير الخط عند حجم الشاشة الصغير */
+    }
+}
+
+
+/* Progress Bar Section */
+.progress-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#progress-bar {
+    width: 70%;
+    margin: 0 10px;
+}
+
+#current-time,
+#duration-time {
+    width: 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Volume Display Section */
+.volume-display {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Playlist Section */
+.playlist {
+    text-align: left;
+}
+
+.playlist h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.playlist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.playlist li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.playlist li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.playlist li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.playlist li:hover img {
+    transform: scale(1.1);
+}
+
+.playlist li div {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Search Section */
+.search {
+    margin-bottom: 20px;
+}
+
+.search input[type="text"], .search button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search button {
+    background-color: #1DB954;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #1AA34A;
+}
+
+/* Audio Player Styling */
+#audio {
+    display: none; /* Hide default audio player */
+}
